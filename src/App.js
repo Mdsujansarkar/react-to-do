@@ -1,9 +1,16 @@
+import React,{ useState } from 'react';
 import './App.css';
-import React from 'react';
+import From from './components/From';
+import TodoList from './components/TodoList';
 function App() {
+const [inputText, setInputText] = useState("");
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <header>
+      <h1>Ed's Todo List {inputText}</h1>
+    </header>
+    <From setInputText={setInputText} />
+    <TodoList />
     </div>
   );
 }
